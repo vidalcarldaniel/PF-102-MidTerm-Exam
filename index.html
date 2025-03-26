@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box color changes onclick</title>
+</head>
+<body>
+    <style>
+        #btn {
+            padding: 100px;
+            background: black;
+            color: white;
+            margin: 15% auto;
+            display: flex;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <button id="btn" onclick="changeColor()">Click Me!</button>
+    <script>
+        function changeColor(){
+            const btn = document.getElementById('btn');
+            const colors = ['navy', 'purple', 'orange', 'gray', 'blue', 'red', 'green'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+            btn.style.backgroundColor = randomColor;
+
+        }
+    </script>
+</body>
+</html>
